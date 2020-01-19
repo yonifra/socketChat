@@ -3,9 +3,9 @@ var http = require('http').createServer(app);
 const port = 3002;
 
 app.get('/', function(req, res){
-  res.send('<h1>Hello world</h1>');
+    res.sendFile(__dirname + '/index.html');
 });
 
 http.listen(port, function(){
-  console.log('listening on *:' + port);
+    console.log('listening on *:' + port);
 });
